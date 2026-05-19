@@ -1,0 +1,522 @@
+/* Main page styling */
+body {
+    background-color: #FFB240;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 0px;
+    padding-top: 120px;
+    
+}
+
+/* Makes the banner image fill the full width of the page */
+.banner {
+    width: 100%;
+    display: block;
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+/* Shrinks the banner when the shrink class is added */
+.shrink-banner {
+    transform: scale(0.85);
+    opacity: 1;
+
+}
+
+/* Centres title text */
+.title {
+    text-align: center;
+}
+
+
+
+/* Main navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #9370DB;
+    padding: 20px 0;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+/* Smaller navbar style when scrolling */
+.navbar.shrink {
+    padding: 6px 0;
+    background-color: #9370DB;
+}
+
+/* Logo inside the navbar */
+.nav-logo {
+    height: 80px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+/* Shrinks the navbar logo when scrolling */
+.navbar.shrink .nav-logo {
+    height: 45px;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Text inside navbar links */
+.navbar a h2 {
+    font-size: 24px;
+    margin: 0;
+    transition: font-size 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+/* Makes navbar text smaller when scrolling */
+.navbar.shrink a h2 {
+    font-size: 16px;
+}
+
+/* Hover effect for navbar text */
+.navbar a:hover h2 {
+    color: #000000;
+    transform: scale(1.1);
+}
+
+/* Main content area */
+main {
+    background-color: #FFB240;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 50px;
+    padding: 20px;
+}
+
+/* Footer area */
+footer {
+    background-color: #FFB240;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    margin: 50px;
+    padding: 10px;
+}
+
+/* Styling for h3 headings */
+h3 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+}
+
+/* Copyright box at the bottom */
+.copyright {
+    text-align: center;
+    background-color: #9370DB;
+    border: 2px solid #000000;
+    font-family: arial, sans-serif;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centres the meet our staff heading */
+.specifications {
+    text-align: center;
+}
+
+/* Navbar logo styling */
+.nav-logo {
+    height: 80px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0px;
+}
+
+/* Container for the job specifications section */
+.jobs {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Dropdown boxes */
+details {
+    margin-bottom: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #9370DB;
+}
+
+/* Dropdown title */
+summary {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Keeps dropdown title white when hovered */
+summary:hover {
+    color: #ffffff;
+}
+
+/* Paragraph spacing inside dropdowns */
+details p {
+    line-height: 1.6;
+}
+
+/* Adds spacing to lists inside dropdowns */
+details ul {
+    margin-left: 20px;
+}
+
+/* Makes all text inside the jobs section white */
+.jobs,
+.jobs p,
+.jobs h2,
+.jobs h3,
+.jobs li,
+.jobs summary {
+    color: white;
+}
+
+
+/* Main application form container */
+.application-form {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background-color: #9370DB;
+    border-top: 4px solid #000000;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Adds spacing between form sections */
+.form-section {
+    margin-bottom: 32px;
+}
+
+/* Layout for form section titles */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+/* Text style for form section titles */
+.section-title h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Line next to each form section title */
+.section-title span {
+    flex: 1;
+    height: 1px;
+    background-color: #000000;
+}
+
+/* Creates a two-column form layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+}
+
+/* Stacks label and input vertically */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Makes an input take up both form columns */
+.full-width {
+    grid-column: span 2;
+}
+
+/* Form label styling */
+label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Required star styling */
+label span {
+    color: #000000;
+}
+
+/* Styling for inputs, dropdowns and textareas */
+input,
+select,
+textarea {
+    padding: 12px 14px;
+    border: 1px solid #020202;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Focus effect when clicking into form fields */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Allows textarea boxes to be resized vertically */
+textarea {
+    resize: vertical;
+}
+
+/* Submit button styling */
+.submit-btn {
+    margin-top: 10px;
+    padding: 13px 24px;
+    border-color: #000000;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Result message box after form submission */
+#result {
+    max-width: 900px;
+    margin: 25px auto 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 4px solid #000000;
+    color: #000000;
+}
+
+/* Makes it fit better on phones */
+@media screen and (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}
+
+/* Main staff section container */
+.staff-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Main dropdown box for each team */
+.team-dropdown {
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 3px solid #9370DB;
+}
+
+/* Team dropdown header */
+.team-dropdown summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #9370DB, #5b3bb3);
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Removes the default dropdown marker on Chrome */
+.team-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Adds custom arrow to dropdown */
+.team-dropdown summary::after {
+    content: "▼";
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotates arrow when dropdown is open */
+.team-dropdown[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Hover effect for team dropdown title */
+.team-dropdown summary:hover {
+    background: linear-gradient(135deg, #a883f0, #6d4ed1);
+}
+
+/* Background and spacing inside the dropdown content */
+.team-content {
+    padding: 30px;
+    background: #f7f2ff;
+}
+
+/* Individual staff member card */
+.staff-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Staff card hover effect */
+.staff-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Staff images */
+.staff-card img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid #9370DB;
+}
+
+/* Staff name and job title */
+.staff-info h2 {
+    margin-top: 0;
+    color: #5b3bb3;
+    font-size: 40px;
+}
+
+/* Staff description text */
+.staff-info p {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Makes staff cards stack on smaller screens */
+@media (max-width: 800px) {
+    .staff-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .staff-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .team-dropdown summary {
+        font-size: 24px;
+    }
+}
+
+/* Large page title styling */
+.title {
+    text-align: center;
+    font-size: 70px;
+    margin: 60px 0 10px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+}
+
+/* Meet our staff heading style */
+.meetourstaff {
+    text-align: center;
+    font-size: 38px;
+    margin: 25px auto;
+    color: #2b165c;
+    background: white;
+    width: fit-content;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 4px solid #9370DB;
+}
+
+/* Makes "Meet Our Staff!" stand out differently */
+.title + .meetourstaff {
+    background: #ffffff;
+    color: white;
+    border: 4px solid white;
+}
+
+/* Makes "Management Team" look like a section heading */
+.meetourstaff + .meetourstaff {
+    background: white;
+    color: #ffffff;
+    margin-top: 35px;
+}
+
+/* Staff page title inside the staff hero section */
+.staff-hero .title {
+    font-size: 64px;
+    margin: 0;
+    color: black;
+    letter-spacing: 2px;
+}
+
+/* Holds the submit button and logo on the same row */
+.form-submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Logo next to the submit button */
+.submit-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Makes the button and logo stack nicely on small screens */
+@media screen and (max-width: 700px) {
+    .form-submit-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .submit-logo {
+        height: 70px;
+    }
+}
